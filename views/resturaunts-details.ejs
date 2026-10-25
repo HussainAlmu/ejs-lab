@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <%- include("../partials/navbar") %>
+    <h1>Resturaunt details</h1>
+    <p><%= resturaunt.name %> <% if (resturaunt.isOpen === true) { %> is open<% } %></p>
+    <p><%= resturaunt.address %></p>
+    <p><%= resturaunt.phone %></p>
+
+    <h1>menu</h1>
+    
+      <% for(let oneResturaunt of resturaunt.menu) { %>
+                <p><%=oneResturaunt.name%> price <%=oneResturaunt.price%></p>      
+                <p>rating: <%=oneResturaunt.rating%></p>    
+                 <br>         
+            <% } %>
+
+  
+</body>
+</html>

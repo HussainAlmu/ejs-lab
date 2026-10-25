@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <%- include("../partials/navbar") %>
+    <h1>All Resturaunts</h1>
+    <ol>
+        <% for(let oneResturaunt of resturaunts) { %>
+            <li>
+                <a href="/resturaunts/<%=oneResturaunt.id%>"><%= oneResturaunt.name %></a>
+                    
+            </li>
+            <% } %>
+    </ol>
+</body>
+</body>
+</html>
